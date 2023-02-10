@@ -1,6 +1,7 @@
 import { useState } from "react";
 import TodoForm from "./TodoForm";
 import { RiDeleteBin5Line } from "react-icons/ri";
+import { BiEditAlt } from "react-icons/bi";
 function TodoList() {
   const [list, setList] = useState([]);
 
@@ -13,8 +14,14 @@ function TodoList() {
     setList(newList);
   };
 
-  const deleteList = () => {
-    console.log("deleted");
+  // deleting the todo list
+  const deleteList = (id) => {
+    window.confirm("Are you Sure?");
+    setList((task) => {
+      return list.filter((item) => {
+        return item.id !== id;
+      });
+    });
   };
   return (
     <div className="container">
@@ -29,8 +36,12 @@ function TodoList() {
               return (
                 <li key={items.id}>
                   {items.text}
-                  <span className="del-icon">
-                    <RiDeleteBin5Line onClick={deleteList} />
+                  <span>
+                    <BiEditAlt className="icon edit-icon" />
+                    <RiDeleteBin5Line
+                      className=" icon del-icon"
+                      onClick={() => deleteList(items.id)}
+                    />
                   </span>
                 </li>
               );

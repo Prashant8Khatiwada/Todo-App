@@ -75,23 +75,29 @@ body {
   text-align: start;
   width: 100%;
   font-size: 1.5rem;
-  padding: 8px 15px 5px 10px;
+  padding: 5px 5px 0px 10px;
   margin-top: 10px;
   border-radius: 5px;
 }
 
-.del-icon {
+.icon {
   background-color: #07beb8;
   color: #c4fff9;
-  padding: 10px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
   border-radius: 5px;
-  font-size: 1.2rem;
+  font-size: 2.2rem;
   cursor: pointer;
+  margin-right: 5px;
 }
 
 .del-icon:hover {
-  background-color: #a62029b9;
-  transition: 0.5s all ease-in-out;
+  background-color: #a62029ee;
+  transition: 0.3s all ease-in-out;
+}
+
+.edit-icon:hover {
+  background-color: green;
+  transition: 0.3s all ease-in-out;
 }
 
 /* ========== MEDIUM DEVICES ========== */
