@@ -31,6 +31,7 @@ body {
   text-align: center;
   padding: 10px 30px;
   border-radius: 5px;
+  margin-top: 2rem;
 }
 
 .todo-input {
@@ -68,10 +69,26 @@ body {
   list-style: none;
   background-color: #07beb838;
   border: 2px solid #07beb8;
+  display: flex;
+  justify-content: space-between;
   text-align: start;
   width: 100%;
   font-size: 1.5rem;
-  padding: 5px 15px 5px 10px;
+  padding: 8px 15px 5px 10px;
   margin-top: 10px;
   border-radius: 5px;
+}
+
+.del-icon {
+  background-color: #07beb8;
+  color: #c4fff9;
+  padding: 10px 10px 5px 10px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.del-icon:hover {
+  background-color: #a62029b9;
+  transition: 0.2s all ease-in-out;
 }

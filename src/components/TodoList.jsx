@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TodoForm from "./TodoForm";
+import { RiDeleteBin5Line } from "react-icons/ri";
 function TodoList() {
   const [list, setList] = useState([]);
 
@@ -22,7 +23,14 @@ function TodoList() {
         <div className="todo-lists">
           <ul>
             {list.map((items) => {
-              return <li key={items.id}>{items.text}</li>;
+              return (
+                <li key={items.id}>
+                  {items.text}
+                  <span className="del-icon">
+                    <RiDeleteBin5Line />
+                  </span>
+                </li>
+              );
             })}
           </ul>
         </div>
