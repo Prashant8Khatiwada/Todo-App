@@ -27,11 +27,12 @@ body {
 .todo-container {
   background-color: #c4fff9;
   width: 40rem;
-  height: 30rem;
+  min-height: 30rem;
+  max-height: fit-content;
   text-align: center;
   padding: 10px 30px;
   border-radius: 5px;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 .todo-input {
@@ -90,5 +91,41 @@ body {
 
 .del-icon:hover {
   background-color: #a62029b9;
-  transition: 0.2s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+}
+
+/* ========== MEDIUM DEVICES ========== */
+@media screen and (max-width:1024px) {
+
+  .todo-container {
+    width: 40rem;
+  }
+
+}
+
+/* ========== SMALL DEVICES ========== */
+@media screen and (max-width:650px) {
+
+  .todo-container {
+    width: 22rem;
+    margin-top: 1rem;
+  }
+
+  .todo-input {
+    font-size: 1rem;
+  }
+
+  .todo-btn {
+    font-size: 1rem;
+  }
+
+  .todo-lists li {
+    font-size: 1rem;
+  }
+
+  .del-icon {
+    font-size: .8rem;
+    padding: 5px 5px 0 5px;
+  }
+
 }

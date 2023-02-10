@@ -11,7 +11,10 @@ function TodoList() {
     }
     const newList = [task, ...list];
     setList(newList);
-    console.log(newList);
+  };
+
+  const deleteList = () => {
+    console.log("deleted");
   };
   return (
     <div className="container">
@@ -27,7 +30,7 @@ function TodoList() {
                 <li key={items.id}>
                   {items.text}
                   <span className="del-icon">
-                    <RiDeleteBin5Line />
+                    <RiDeleteBin5Line onClick={deleteList} />
                   </span>
                 </li>
               );
