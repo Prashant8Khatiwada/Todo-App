@@ -13,6 +13,10 @@ function TodoForm(props) {
     });
     setTask("");
   };
+
+  // props.onEdit((id, text) => {
+  //   setTask({ id: id, text: text });
+  // });
   return (
     <form className="todo-form" onSubmit={handleSubmit}>
       <input

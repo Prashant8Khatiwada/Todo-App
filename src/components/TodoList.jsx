@@ -4,6 +4,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { BiEditAlt } from "react-icons/bi";
 function TodoList() {
   const [list, setList] = useState([]);
+  const [edit, setEdit] = useState([]);
 
   // assigning the array to list items
   const addTodo = (task) => {
@@ -13,6 +14,10 @@ function TodoList() {
     const newList = [task, ...list];
     setList(newList);
   };
+
+  // const editList = (id, text) => {
+  //   id, text;
+  // };
 
   // deleting the todo list
   const deleteList = (id) => {
@@ -27,7 +32,7 @@ function TodoList() {
     <div className="container">
       <h1>Manage Your Time Here! </h1>
       <div className="todo-container">
-        <TodoForm onSubmit={addTodo} />
+        <TodoForm onSubmit={addTodo} onEdit={editList} />
 
         {/* mapping the array  */}
         <div className="todo-lists">
@@ -37,7 +42,10 @@ function TodoList() {
                 <li key={items.id}>
                   {items.text}
                   <span>
-                    <BiEditAlt className="icon edit-icon" />
+                    <BiEditAlt
+                      className="icon edit-icon"
+                      onClick={() => editList(items.id, items.text)}
+                    />
                     <RiDeleteBin5Line
                       className=" icon del-icon"
                       onClick={() => deleteList(items.id)}
