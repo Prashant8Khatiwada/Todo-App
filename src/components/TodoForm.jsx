@@ -22,7 +22,7 @@ function TodoForm(props) {
         value={task}
         onChange={(e) => setTask(e.target.value)}
       />
-      <input className="todo-btn" type="submit" value="Add Task" />
+      <input className="todo-btn" type="submit" value="Add" />
     </form>
   );
 }
