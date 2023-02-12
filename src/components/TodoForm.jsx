@@ -14,15 +14,13 @@ function TodoForm(props) {
     setTask("");
   };
 
-  // props.onEdit((id, text) => {
-  //   setTask({ id: id, text: text });
-  // });
+
   return (
     <form className="todo-form" onSubmit={handleSubmit}>
       <input
         className="todo-input"
         type="text"
-        placeholder="Add Yout Task Here..."
+        placeholder="Add Your Task Here..."
         value={task}
         onChange={(e) => setTask(e.target.value)}
       />
